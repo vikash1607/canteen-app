@@ -59,7 +59,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const login = async (email: string, password: string) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/login', {
+      const response = await axios.post('http://canteen-app-1.onrender.com/api/login', {
         email,
         password,
       });
@@ -80,7 +80,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const register = async (userData: RegisterData) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/register', userData);
+      const response = await axios.post('http://canteen-app-1.onrender.com/api/register', userData);
 
       const { token, user } = response.data;
       

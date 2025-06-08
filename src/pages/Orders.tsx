@@ -26,7 +26,7 @@ const Orders: React.FC = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/orders');
+      const response = await axios.get('http://canteen-app-1.onrender.com/api/orders');
       setOrders(response.data.sort((a: Order, b: Order) => 
         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
       ));

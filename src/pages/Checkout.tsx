@@ -49,7 +49,7 @@ const Checkout: React.FC = () => {
         },
       };
 
-      const orderResponse = await axios.post('http://localhost:3001/api/orders', orderData);
+      const orderResponse = await axios.post('http://canteen-app-1.onrender.com/api/orders', orderData);
       
       // Process payment
       const paymentData = {
@@ -58,7 +58,7 @@ const Checkout: React.FC = () => {
         paymentMethod: formData.paymentMethod,
       };
 
-      await axios.post('http://localhost:3001/api/payment', paymentData);
+      await axios.post('http://canteen-app-1.onrender.com/api/payment', paymentData);
 
       // Clear cart and redirect
       clearCart();

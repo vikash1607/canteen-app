@@ -32,7 +32,7 @@ const Menu: React.FC = () => {
 
   const fetchFoodItems = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/food-items');
+      const response = await axios.get('http://canteen-app-1.onrender.com/api/food-items');
       setFoodItems(response.data);
     } catch (error) {
       console.error('Error fetching food items:', error);
